@@ -94,11 +94,14 @@ ul {
 .contact {
   display: flex;
   margin-left: auto;
+  align-items: baseline;
 }
 .contact .item:not(:last-child) {
   margin-right: 30px;
 }
 .contact a {
+  display: flex;
+  align-items: center;
   color: var(--second-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -110,15 +113,40 @@ ul {
 .contact a:focus {
   color: var(--accent-color);
 }
+
+.contact-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+.contact-icon:hover,
+.contact-icon:focus {
+  fill: currentColor;
+}
 /* Hero */
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: var(--prime-text-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/header-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .hero {
   text-align: center;
 }
 .hero-title {
   margin-top: 0;
   margin-bottom: 46px;
+  padding-top: 200px;
 
-  background-color: var(--prime-text-color);
   color: var(--white-color);
   font-weight: 900;
   font-size: 44px;
@@ -158,9 +186,17 @@ ul {
 .advantage-list {
   display: flex;
 }
-
-.advantage-list .item {
-  width: 278px;
+.advantage-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+}
+.advantage-icon {
+  width: 70px;
+  height: 70px;
 }
 .advantage-list .item:not(:last-child) {
   margin-right: 30px;
@@ -201,6 +237,8 @@ ul {
 }
 .team .item {
   background-color: var(--white-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 .team-list {
   display: flex;
@@ -217,6 +255,7 @@ ul {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
+  text-align: center;
 }
 .team-list p {
   margin-top: 0;
@@ -226,12 +265,40 @@ ul {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
+  text-align: center;
 }
 .team img {
   display: block;
 }
 .team-social {
+  display: flex;
   padding-bottom: 28px;
+  justify-content: center;
+}
+
+.social:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social a {
+  color: var(--white-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social a:hover {
+  background-color: var(--accent-color);
+}
+.social-icon {
+  fill: var(--second-text-color);
+  width: 20px;
+  height: 20px;
+}
+.social-icon:hover {
+  fill: currentColor;
 }
 
 /* Client */
@@ -313,6 +380,24 @@ button:focus {
 }
 .work-title {
   text-align: center;
+}
+.card-content {
+  padding-right: 20px;
+  padding-left: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #eeeeee;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #eeeeee;
+
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #eeeeee;
 }
 .works-list {
   display: flex;
