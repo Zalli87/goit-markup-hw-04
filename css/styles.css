@@ -280,8 +280,9 @@ ul {
   margin-right: 10px;
 }
 
-.social a {
-  color: var(--white-color);
+.social-link {
+  color: var(--second-text-color);
+  background-color: var(--white-color);
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -289,15 +290,13 @@ ul {
   justify-content: center;
   align-items: center;
 }
-.social a:hover {
+.social-link:hover {
   background-color: var(--accent-color);
+  color: var(--white-color);
 }
 .social-icon {
-  fill: var(--second-text-color);
   width: 20px;
   height: 20px;
-}
-.social-icon:hover {
   fill: currentColor;
 }
 
@@ -313,11 +312,19 @@ ul {
   justify-content: center;
   align-items: center;
 
-  width: 175px;
+  width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
+.item.border:hover {
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+}
+
+.client {
+}
+
 .client img {
   padding-top: 20px;
   padding-bottom: 20px;
