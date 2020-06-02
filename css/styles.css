@@ -301,35 +301,34 @@ ul {
 }
 
 /* Client */
-.client {
+.client-list {
   display: flex;
 }
-.client .item:not(:last-child) {
+.client-list .item:not(:last-child) {
   margin-right: 30px;
 }
-.item.border {
+
+.client-link {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 170px;
   height: 90px;
+
   border: 1px solid #afb1b8;
   border-radius: 4px;
-}
-.item.border:hover {
-  border: 1px solid #2196f3;
-  border-radius: 4px;
-}
 
+  color: var(--second-text-color);
+}
+.client-link:hover {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
 .client {
+  fill: currentColor;
 }
-
-.client img {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 40px;
-  padding-left: 40px;
+.client:hover {
+  fill: currentColor;
 }
 /* Button */
 button {
@@ -415,6 +414,11 @@ button:focus {
   margin-right: 30px;
   margin-bottom: 30px;
 }
+
+.works-list .item:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
 .works-list .item:nth-child(3n) {
   margin-right: 0;
 }
@@ -491,15 +495,67 @@ address {
   margin-top: 0;
   margin-bottom: 28px;
 }
+
+.footer-social {
+  display: flex;
+}
+.footer-social .item:not(:last-child) {
+  margin-right: 10px;
+}
+.footersocial-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.footersocial-link:hover {
+  background-color: var(--accent-color);
+}
+.fotersocial-icon {
+  width: 20px;
+  height: 20px;
+}
 .page-footer b {
+  display: inline-block;
   margin-top: 0;
-  margin-bottom: 9px;
+  margin-bottom: 21px;
   color: var(--white-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
+.footer-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  border-radius: 4px;
+  padding: 10px 32px;
+
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-decoration: none;
+}
+.footer-button::after {
+  background-image: url(../images/icon-send.png);
+  margin-left: 10px;
+  content: "";
+  width: 24px;
+  height: 24px;
+}
+/* .footer-button::after {
+  background-image: url(../images/icon-send.png);
+  background-size: contain;
+} */
 
 .copyright {
   margin: 0;
